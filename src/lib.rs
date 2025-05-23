@@ -1,11 +1,10 @@
+mod color;
 mod error;
-mod types;
+mod r#move;
 
-pub use error::*;
-pub use types::*;
-
-#[cfg(feature = "sgf")]
+pub mod gtp;
 pub mod sgf;
 
-#[cfg(feature = "sgf")]
-pub mod gtp;
+pub use color::Color;
+pub use error::ParseError;
+pub use r#move::Move;
